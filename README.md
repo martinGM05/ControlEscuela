@@ -1,0 +1,2 @@
+# ControlEscuela
+Entity Framework Core
