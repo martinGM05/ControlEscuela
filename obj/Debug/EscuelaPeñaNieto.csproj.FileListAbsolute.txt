@@ -106,3 +106,4 @@ C:\Users\Martin Gonzalez\source\repos\EscuelaPeñaNieto\obj\Debug\EscuelaPeñaNi
 C:\Users\Martin Gonzalez\source\repos\EscuelaPeñaNieto\obj\Debug\EscuelaPeñaNieto.Forms.addPersonal.resources
 C:\Users\Martin Gonzalez\source\repos\EscuelaPeñaNieto\obj\Debug\EscuelaPeñaNieto.Forms.updateDeleteEmpleado.resources
 C:\Users\Martin Gonzalez\source\repos\EscuelaPeñaNieto\obj\Debug\EscuelaPeñaNieto.Forms.CalificacionSalon.resources
+C:\Users\Martin Gonzalez\source\repos\EscuelaPeñaNieto\obj\Debug\EscuelaPeñaNieto.csprojAssemblyReference.cache

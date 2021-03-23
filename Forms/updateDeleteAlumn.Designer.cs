@@ -365,9 +365,9 @@ namespace EscuelaPeñaNieto.Forms
             // 
             this.groupBox1.Controls.Add(this.gridViewAlumnos);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 12);
+            this.groupBox1.Location = new System.Drawing.Point(179, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(885, 143);
+            this.groupBox1.Size = new System.Drawing.Size(618, 143);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Alumnos";
@@ -382,7 +382,7 @@ namespace EscuelaPeñaNieto.Forms
             this.gridViewAlumnos.Name = "gridViewAlumnos";
             this.gridViewAlumnos.RowHeadersWidth = 51;
             this.gridViewAlumnos.RowTemplate.Height = 24;
-            this.gridViewAlumnos.Size = new System.Drawing.Size(879, 111);
+            this.gridViewAlumnos.Size = new System.Drawing.Size(612, 111);
             this.gridViewAlumnos.TabIndex = 0;
             this.gridViewAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewAlumnos_CellClick);
             // 

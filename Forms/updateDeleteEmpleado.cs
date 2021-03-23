@@ -40,39 +40,29 @@ namespace EscuelaPeñaNieto.Forms
 
         private void llenarEmpleado()
         {
-            this.gridViewAlumnos.DataSource = db.Grupos.Join(
-                db.Empleado,
-                Grupos => Grupos.Id,
-                Empleado => Empleado.SalonId,
-                (Grupos, Empleado) => new { Grupos, Empleado })
-                .Join(db.Roles,
-                emp => emp.Empleado.RolesId,
-                rol => rol.Id,
-                (Empleado1, rol) => new { Empleado1, rol })
-                .Select(z => new
-                {
-                    Id = z.Empleado1.Empleado.Id,
-                    Nombre = z.Empleado1.Empleado.Nombre,
-                    Apellido = z.Empleado1.Empleado.Apellido,
-                    Cedula = z.Empleado1.Empleado.Cedula,
-                    Rol = z.rol.tipo,
-                    Salon = z.Empleado1.Grupos.Grupo,
-                    RolId = z.rol.Id,
-                    SalonId = z.Empleado1.Grupos.Id
-                }).ToList();
-                
+            this.gridViewEmpleados.DataSource = db.Empleado.Select(x => new
+            {
+                Id = x.Id,
+                Nombre_Completo = x.Nombre + " " + x.Apellido,
+                Cedula = x.Cedula,
+                Rol = x.Roles.tipo,
+                Salon_Encargado = x.Salon.Grupo
+            }).ToList();
+
         }
 
-        private void gridViewAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void gridViewEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                this.txtId.Text = gridViewAlumnos[0, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.txtNombre.Text = gridViewAlumnos[1, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.txtApellidos.Text = gridViewAlumnos[2, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.txtCedula.Text = gridViewAlumnos[3, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.cmbRol.SelectedValue = gridViewAlumnos[6, gridViewAlumnos.CurrentCell.RowIndex].Value;
-                this.cmbGradoGrupo.SelectedValue = gridViewAlumnos[7, gridViewAlumnos.CurrentCell.RowIndex].Value;
+                int idEmpleado = Convert.ToInt32(gridViewEmpleados[0, gridViewEmpleados.CurrentCell.RowIndex].Value);
+                Empleado emp = db.Empleado.Find(idEmpleado);
+                this.txtId.Text = emp.Id.ToString();
+                this.txtNombre.Text = emp.Nombre.ToString();
+                this.txtApellidos.Text = emp.Apellido.ToString();
+                this.txtCedula.Text = emp.Cedula.ToString();
+                this.cmbRol.SelectedValue = emp.RolesId;
+                this.cmbGradoGrupo.SelectedValue = emp.SalonId;
 
             }
             catch (Exception ex)

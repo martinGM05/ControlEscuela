@@ -160,5 +160,10 @@ namespace EscuelaPeñaNieto
             ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new CalificacionSalon());
         }
+
+        private void iconPictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

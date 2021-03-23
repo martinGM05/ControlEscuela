@@ -39,6 +39,7 @@ namespace EscuelaPeñaNieto
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             this.lblChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
@@ -61,6 +62,7 @@ namespace EscuelaPeñaNieto
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
             this.panelDesktop.SuspendLayout();
@@ -107,7 +109,7 @@ namespace EscuelaPeñaNieto
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButton2.Size = new System.Drawing.Size(214, 60);
             this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Calificaciones Salón";
+            this.iconButton2.Text = "Grupos";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
@@ -229,6 +231,7 @@ namespace EscuelaPeñaNieto
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.iconPictureBox5);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.lblChildForm);
             this.panel1.Controls.Add(this.iconCurrentChild);
@@ -238,6 +241,22 @@ namespace EscuelaPeñaNieto
             this.panel1.Size = new System.Drawing.Size(949, 62);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 45;
+            this.iconPictureBox5.Location = new System.Drawing.Point(888, 11);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(49, 45);
+            this.iconPictureBox5.TabIndex = 3;
+            this.iconPictureBox5.TabStop = false;
+            this.iconPictureBox5.Click += new System.EventHandler(this.iconPictureBox5_Click);
             // 
             // btnCerrar
             // 
@@ -491,6 +510,7 @@ namespace EscuelaPeñaNieto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
             this.panelDesktop.ResumeLayout(false);
@@ -537,6 +557,7 @@ namespace EscuelaPeñaNieto
         private FontAwesome.Sharp.IconPictureBox btnCerrar;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
     }
 }
 

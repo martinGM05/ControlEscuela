@@ -45,11 +45,11 @@ namespace EscuelaPeñaNieto.Forms
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gridViewAlumnos = new System.Windows.Forms.DataGridView();
+            this.gridViewEmpleados = new System.Windows.Forms.DataGridView();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDesktop
@@ -243,7 +243,7 @@ namespace EscuelaPeñaNieto.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.gridViewAlumnos);
+            this.groupBox1.Controls.Add(this.gridViewEmpleados);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 12);
             this.groupBox1.Name = "groupBox1";
@@ -252,19 +252,19 @@ namespace EscuelaPeñaNieto.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal";
             // 
-            // gridViewAlumnos
+            // gridViewEmpleados
             // 
-            this.gridViewAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.gridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.gridViewAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridViewAlumnos.Location = new System.Drawing.Point(3, 29);
-            this.gridViewAlumnos.Name = "gridViewAlumnos";
-            this.gridViewAlumnos.RowHeadersWidth = 51;
-            this.gridViewAlumnos.RowTemplate.Height = 24;
-            this.gridViewAlumnos.Size = new System.Drawing.Size(876, 140);
-            this.gridViewAlumnos.TabIndex = 0;
-            this.gridViewAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewAlumnos_CellClick);
+            this.gridViewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.gridViewEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.gridViewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridViewEmpleados.Location = new System.Drawing.Point(3, 29);
+            this.gridViewEmpleados.Name = "gridViewEmpleados";
+            this.gridViewEmpleados.RowHeadersWidth = 51;
+            this.gridViewEmpleados.RowTemplate.Height = 24;
+            this.gridViewEmpleados.Size = new System.Drawing.Size(876, 140);
+            this.gridViewEmpleados.TabIndex = 0;
+            this.gridViewEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewEmpleados_CellClick);
             // 
             // updateDeleteEmpleado
             // 
@@ -278,7 +278,7 @@ namespace EscuelaPeñaNieto.Forms
             this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,7 +298,7 @@ namespace EscuelaPeñaNieto.Forms
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView gridViewAlumnos;
+        private System.Windows.Forms.DataGridView gridViewEmpleados;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label5;

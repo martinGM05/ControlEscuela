@@ -26,22 +26,14 @@ namespace EscuelaPeñaNieto.Forms
 
         private void llenarAlumnos()
         {
-            this.gridViewAlumnos.DataSource = db.Grupos.Join(
-                db.Alumno,
-                Grupos => Grupos.Id,
-                Alumno => Alumno.GrupoId,
-                (Grupos, Alumno) => new { Grupos, Alumno })
-                .Select(z => new
-                {
-                    Id = z.Alumno.Id,
-                    Nombre = z.Alumno.Nombre,
-                    Apellido = z.Alumno.Apellido,
-                    FechaIngreso = z.Alumno.Fecha_Ingreso,
-                    Promedio = z.Alumno.promedio,
-                    Salon = z.Grupos.Grupo,
-                    SalonId = z.Alumno.GrupoId
-                }).ToList();
-
+            this.gridViewAlumnos.DataSource = db.Alumno.Select(x => new
+            {
+                Id = x.Id,
+                Nombre = x.Nombre,
+                Apellido = x.Apellido,
+                Promedio = x.promedio,
+                Salon = x.Grupo.Grupo
+            }).ToList();
         }
         private void llenarGradoGrupo()
         {
@@ -55,11 +47,13 @@ namespace EscuelaPeñaNieto.Forms
         {
             try
             {
-                this.txtId.Text = gridViewAlumnos[0, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.txtNombre.Text = gridViewAlumnos[1, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.txtApellidos.Text = gridViewAlumnos[2, gridViewAlumnos.CurrentCell.RowIndex].Value.ToString();
-                this.dateIngreso.Value = Convert.ToDateTime(gridViewAlumnos[3, gridViewAlumnos.CurrentCell.RowIndex].Value);
-                this.cmbGradoGrupo.SelectedValue = gridViewAlumnos[6, gridViewAlumnos.CurrentCell.RowIndex].Value;
+                int idAlumno = Convert.ToInt32(gridViewAlumnos[0, gridViewAlumnos.CurrentCell.RowIndex].Value);
+                Alumno alum = db.Alumno.Find(idAlumno);
+                this.txtId.Text = alum.Id.ToString();
+                this.txtNombre.Text = alum.Nombre.ToString();
+                this.txtApellidos.Text = alum.Apellido.ToString();
+                this.dateIngreso.Value = alum.Fecha_Ingreso;
+                this.cmbGradoGrupo.SelectedValue = alum.GrupoId;
 
             }
             catch (Exception ex)
