@@ -105,5 +105,10 @@ namespace EscuelaPeñaNieto.Forms
                 llenarEmpleado();
             }
         }
+
+        private void soloLetra(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
     }
 }

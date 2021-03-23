@@ -230,6 +230,7 @@ namespace EscuelaPeñaNieto.Forms
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(204, 27);
             this.txtApellidos.TabIndex = 28;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetra);
             // 
             // txtNombre
             // 
@@ -240,6 +241,7 @@ namespace EscuelaPeñaNieto.Forms
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(204, 27);
             this.txtNombre.TabIndex = 27;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetra);
             // 
             // groupBox1
             // 

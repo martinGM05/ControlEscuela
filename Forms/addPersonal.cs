@@ -63,5 +63,10 @@ namespace EscuelaPeñaNieto.Forms
                 }
             }
         }
+
+        private void soloLetra(object sender, KeyPressEventArgs e)
+        {
+            v.soloLetras(e);
+        }
     }
 }
