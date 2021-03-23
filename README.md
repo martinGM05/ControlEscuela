@@ -1,2 +1,4 @@
 # ControlEscuela
-Entity Framework Core
+
+Software desarrollado en Entity Framework Core.
+
